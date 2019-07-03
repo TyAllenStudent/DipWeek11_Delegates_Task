@@ -4,6 +4,7 @@ using System.Linq;
 using FileParserNetStandard;
 using NUnit.Framework;
 using ObjectLibrary;
+using System.IO;
 
 namespace PersonHandler_Tests {
     [TestFixture]
@@ -11,7 +12,7 @@ namespace PersonHandler_Tests {
         private FileHandler _fh;
         private DataParser _dp;
 
-        private string csvPath = @"C:\Diploma-at-28-April\OOP\New folder\DipWeek11_Delegates_Task\Filesprocessed_data.csv"; // change to appropriate path
+        private string csvPath = @"C:\Diploma-at-28-April\OOP\New folder\DipWeek11_Delegates_Task\Files\processed_data.csv"; // change to appropriate path
         private List<List<string>> data;
 
         private List<Person> people;
@@ -91,6 +92,13 @@ namespace PersonHandler_Tests {
             var result = ph.GetAmountBornOnEachDate();
             Assert.AreEqual("11/04/2017 12:00:00 AM\t2", result.First());
             Assert.AreEqual("8/05/2017 12:00:00 AM	1", result[23]);
+        }
+
+        [Test]
+        [Ignore ("Rosebud")]        
+        public void TyAllen102058205()
+        {
+            
         }
     }
 }
